@@ -1,0 +1,51 @@
+[
+    {
+        "company": "Amazon Web Services",
+        "product": "Amazon Cognito",
+        "description": "Amazon Cognito is a developer-centric and cost-effective customer identity and access management (CIAM) service.",
+        "type": "Customer Identity and Access Management (CIAM)",
+        "licensing": "Commercial",
+        "link": "https://aws.amazon.com/cognito/"
+    },
+    {
+        "company": "WSO2",
+        "product": "WSO2 Identity Server",
+        "description": "WSO2 Identity Server is a powerful, modern identity and access management solution for your on-premises or cloud environment.",
+        "type": "Unifed IAM Solution",
+        "licensing": "Open Source: Apache License 2.0",
+        "link": "https://wso2.com/identity-server"
+    },
+    {
+        "company": "WSO2",
+        "product": "Asgardeo",
+        "description": "WSO2 Asgardeo is a cloud-native, comprehensive IDaaS and CIAM solution that simplifies identity management, offers seamless single sign-on, and ensures secure access for applications with a focus on enhancing user experience and privacy.",
+        "type": "TypeHere",
+        "licensing": "Open Source: Apache License 2.0",
+        "link": "https://wso2.com/asgardeo/"
+    },
+    {
+        "company": "The Linux Foundation",
+        "product": "Keycloak",
+        "description": "DescriptionHere",
+        "type": "Unifed IAM Solution",
+        "licensing": "LicenseInfoHere",
+        "link": "https://www.keycloak.org/"
+    },
+    {
+        "company": "CompanyHere",
+        "product": "ProductNameHere",
+        "description": "DescriptionHere",
+        "type": "TypeHere",
+        "licensing": "LicenseInfoHere",
+        "link": "LinkHere"
+    },
+    {
+        "company": "CompanyHere",
+        "product": "ProductNameHere",
+        "description": "DescriptionHere",
+        "type": "TypeHere",
+        "licensing": "LicenseInfoHere",
+        "link": "LinkHere"
+    }
+  ]
+  

@@ -1,0 +1,42 @@
+/* Table.css */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.th,
+.td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tr:nth-child(even) {
+  background-color: #16171b;
+}
+
+.th {
+  background-color: #17181b;
+  color: #F7F8E2;
+  /* Ensure the header cell accommodates both title and filter input */
+  position: relative;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Style for filter input within the header */
+.filter-input {
+  width: 100%;
+  margin-top: 4px;
+  box-sizing: border-box; /* Ensures the input fits nicely */
+  padding: 4px;
+  border: 1px solid #ccc;
+}
+
+.th > div {
+  display: flex;
+  flex-direction: column;
+}
