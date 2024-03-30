@@ -267,14 +267,26 @@ import { useTable, useSortBy, useFilters, Column } from 'react-table';
 import './Table.css'; // Make sure the stylesheet is correctly imported
 
 // Define a default UI for filtering
+// const DefaultColumnFilter = ({
+//   column: { filterValue, setFilter },
+// }) => (
+//   <input
+//     value={filterValue || ''}
+//     onChange={e => setFilter(e.target.value || undefined)}
+//     placeholder="Search..."
+//     className="filter-input" // Ensure this matches your CSS class for styling
+//   />
+// );
+
 const DefaultColumnFilter = ({
   column: { filterValue, setFilter },
 }) => (
   <input
     value={filterValue || ''}
     onChange={e => setFilter(e.target.value || undefined)}
+    onClick={e => e.stopPropagation()}
     placeholder="Search..."
-    className="filter-input" // Ensure this matches your CSS class for styling
+    className="filter-input"
   />
 );
 
