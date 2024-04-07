@@ -25,6 +25,11 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  font-size: 1em;
+}
+
+.td {
+  font-size: .95em;
 }
 
 /* Style for filter input within the header */

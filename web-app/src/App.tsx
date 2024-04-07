@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import Table from './Table';
 import { Column, CellProps } from 'react-table';
+import importedData from './data/data.json';
 
 interface DataRow {
   company: string;
   product: string;
   description: string;
-  type: string;
+  functions: string;
   opensource: string;
   link: string;
 }
@@ -28,12 +29,14 @@ const columns: Column<DataRow>[] = [
   {
     Header: 'Company',
     accessor: 'company',
-    minWidth: 160,
+    minWidth: 175,
+    maxWidth: 200,
   },
   {
     Header: 'Product Name',
     accessor: 'product',
-    minWidth: 160,
+    minWidth: 175,
+    maxWidth: 200,
     Cell: ({ row }: CellProps<DataRow>) => (
       <a href={row.original.link} target="_blank" rel="noopener noreferrer">
         {row.original.product}
@@ -43,31 +46,37 @@ const columns: Column<DataRow>[] = [
   {
     Header: 'Description',
     accessor: 'description',
-    minWidth: 250,
+    minWidth: 225,
+    // maxWidth: 200,
     Cell: ({ value }) => <DescriptionWithBreaks text={value} />,
   },
   {
-    Header: 'Type',
-    accessor: 'type',
-    minWidth: 150,
+    Header: 'Functions',
+    accessor: 'functions',
+    minWidth: 170,
+    maxWidth: 200,
   },
   {
     Header: 'Open Source',
     accessor: 'opensource',
-    minWidth: 55,
+    minWidth: 115,
+    maxWidth: 125,
     Cell: ({ value }) => <DescriptionWithBreaks text={value} />,
   },
 ];
 
-function App() {
-  const [data, setData] = useState<DataRow[]>([]);
+// function App() {
+//   const [data, setData] = useState<DataRow[]>([]);
 
-  useEffect(() => {
-    fetch('/data.json')
-      .then((res) => res.json())
-      .then((fetchedData) => setData(fetchedData))
-      .catch((error) => console.error("Failed to load data", error));
-  }, []);
+//   useEffect(() => {
+//     fetch('/data.json')
+//       .then((res) => res.json())
+//       .then((fetchedData) => setData(fetchedData))
+//       .catch((error) => console.error("Failed to load data", error));
+//   }, []);
+const data: DataRow[] = importedData;
+
+function App() {
 
   return (
     <div className="App">
@@ -77,10 +86,8 @@ function App() {
           <img src="https://img.shields.io/github/stars/iamAbrom/identity-Product-Listing?style=social&label=Contribute%20to%20this%20listing" className="top-link" />
         </a>
       </div>
-      {/* <div className="table-container"> */}
         {/* @ts-expect-error */}
         <Table columns={columns} data={data} />
-      {/* </div> */}
     </div>
   );
 }

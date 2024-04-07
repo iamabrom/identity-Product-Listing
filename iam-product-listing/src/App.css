@@ -1,6 +1,7 @@
 #root {
-  width: 95%;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -38,32 +39,4 @@
 
 .read-the-docs {
   color: #888;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.App-header {
-  float: right;
-  text-align: left;
-  margin: 0 0 10px 0;
-  color: #F7F8E2;
-}
-
-.top-link {
-  text-decoration: none;
-  color: #93CD64;
-  font-size: 16px;
 }
